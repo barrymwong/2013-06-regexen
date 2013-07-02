@@ -28,7 +28,7 @@ describe("your regexes", function(){
   // - can only contain letters, spaces, underscores and hyphens.
   it("should filter usernames", function(){
 
-    var regex = /fixme/;
+    var regex = /^[a-z][a-z\s-_]{3,19}$/;
 
     var tests = [
       ["shawndrost", true],
@@ -63,7 +63,7 @@ describe("your regexes", function(){
   it("should extract text", function(){
 
     var extractText = function(str){
-      var matches = /fixme/.exec(str);
+      var matches = /[^<>][^<>.]*[\w][^<>]/.exec(str);
       return /* something to do with matches?? */;
     };
 
@@ -81,7 +81,7 @@ describe("your regexes", function(){
   // CHALLENGE: match a decimal number.
   it("should match decimal numbers", function(){
 
-    var regex = /fixme/;
+    var regex = /^[0-9-]*\.[0-9]+/;
 
     var tests = [
       ["-0.0", true],
