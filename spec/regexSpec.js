@@ -19,8 +19,8 @@ describe("your regexes", function(){
       } else {
         expect(string).not.toMatch(regex);
       }
-    })
-  })
+    });
+  });
 
   // CHALLENGE: enforce irritating username rules
   // - must start with a letter.
@@ -53,8 +53,8 @@ describe("your regexes", function(){
       } else {
         expect(string).not.toMatch(regex);
       }
-    })
-  })
+    });
+  });
 
   // CHALLENGE: extract text contents of a string with an html tag in it
   // - use lazy matchers.
@@ -75,8 +75,8 @@ describe("your regexes", function(){
 
     tests.forEach(function(testData){
       expect(extractText(testData[0])).toEqual(testData[1]);
-    })
-  })
+    });
+  });
 
   // CHALLENGE: match a decimal number.
   it("should match decimal numbers", function(){
@@ -91,7 +91,7 @@ describe("your regexes", function(){
       [".023", true],
       ["12.023", true],
       ["a12.023", false],
-      ["12.023-", false],
+      ["12.023-", false]
     ];
 
     tests.forEach(function(testData){
@@ -101,8 +101,8 @@ describe("your regexes", function(){
       } else {
         expect(string).not.toMatch(regex);
       }
-    })
-  })
+    });
+  });
 
   // CHALLENGE: given a string and a word, test if the word occurs two 
   // times in quick succession (within 3 words) within the string.  You 
@@ -119,16 +119,16 @@ describe("your regexes", function(){
       ["we like regexes because they're regexes", "regexes", true],
       ["regexes are lovely", "potato", false],
       ["we like a regex because of regexes", "regex", false],
-      ["regexes, we like, because they're regexes", "regexes", false],
+      ["regexes, we like, because they're regexes", "regexes", false]
     ];
 
     tests.forEach(function(testData){
-      var haystack = testData[0], 
-        needle = testData[1], 
-        expectedResult = testData[2]
+      var haystack = testData[0],
+        needle = testData[1],
+        expectedResult = testData[2];
         result = containsNearbyWords(haystack, needle);
       expect(result).toEqual(expectedResult);
-    })
-  })
+    });
+  });
 
 });
