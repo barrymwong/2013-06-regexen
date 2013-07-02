@@ -3,13 +3,12 @@ describe("your regexes", function(){
   // CHALLENGE: match an ip address
   it("should match ip addresses", function(){
 
-    var regex = /fixme/;
-
+    var regex = /[\d]{1,3}\.[\d]{1,3}\.[\d]{1,3}\.[\d]{1,3}/;
     var tests = [
       ["a.b.c.d", false],
       ["10.0.0.224", true],
       ["192.168.0.1", true],
-      ["192.168.0", false],
+      ["192.168.0", false]
       // ["999.999.999.999", false] // uncomment if you're feeling self-destructive
     ];
 
