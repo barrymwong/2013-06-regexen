@@ -104,8 +104,8 @@ describe("your regexes", function(){
     });
   });
 
-  // CHALLENGE: given a string and a word, test if the word occurs two 
-  // times in quick succession (within 3 words) within the string.  You 
+  // CHALLENGE: given a string and a word, test if the word occurs two
+  // times in quick succession (within 3 words) within the string.  You
   // should use regexes, not because they're the best tool -- but because
   // you love pain.
   it("should detect nearby words", function(){
